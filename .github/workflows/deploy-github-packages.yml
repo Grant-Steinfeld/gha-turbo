@@ -3,7 +3,7 @@ name: Deploy Docker to GitHub Packages
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   build:
