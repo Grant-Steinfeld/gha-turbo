@@ -23,3 +23,4 @@ and
 
 Edward Thomson's  [GitHub Actions Day 9: Deploy Node.js app to GitHub Packages](https://www.edwardthomson.com/blog/github_actions_9_deploy_to_github_packages.html)
 
+[Adding pass/fail badge](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)
