@@ -1,0 +1,25 @@
+name: Deploy Docker to GitHub Packages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: package docker
+        run: |
+          VERSION=$(date +%s)
+          docker login docker.pkg.github.com --username grant-steinfeld --password ${{ secrets.ACTIONS_TOKEN }}
+          docker build . --file Dockerfile --tag docker.pkg.github.com/grant-steinfeld/gha-turbo/gha-turbo-py:${VERSION}
+          docker push docker.pkg.github.com/grant-steinfeld/gha-turbo/gha-turbo-py:${VERSION}
+        env:
+          CI: true
