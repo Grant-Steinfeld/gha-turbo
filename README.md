@@ -1,5 +1,7 @@
-# Basic Python Program
-## Exercise GitHub Actions
+![example branch parameter](https://github.com/grant-steinfeld/gha-turbo/actions/workflows/deploy-github-packages.yml/badge.svg?branch=main)
+
+
+# Basic Python Program to Exercise GitHub Actions
 
 GitHub Packages - create and push Docker Image
 
